@@ -1,0 +1,992 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+a {
+	text-decoration:none;
+	}
+::-moz-selection { 
+  background-color: #6ab344;
+  color: #fff;
+}
+
+::selection {
+  background-color: #6ab344;
+  color: #fff;
+}
+
+.android-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.android-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.android-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.android-mobile-title {
+  display: none !important;
+}
+
+
+.android-logo-image {
+  height: 28px;
+  width: 140px;
+}
+
+
+.android-header {
+  overflow: visible;
+  background-color: white;
+}
+
+  .android-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .android-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .android-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .android-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .android-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .android-search-box.is-focused + .android-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .android-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .android-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid red /*#8bc34a*/;
+    }
+
+  .android-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .android-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.android-drawer {
+  border-right: none;
+}
+
+  .android-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .android-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .android-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+  }
+
+  .android-drawer .mdl-layout-title {
+    position: relative;
+    background: #6ab344;
+    height: 160px;
+  }
+
+    .android-drawer .android-logo-image {
+      position: absolute;
+      bottom: 16px;
+    }
+
+.android-be-together-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/slide01.jpg') center 30% no-repeat;
+  background-size: cover;
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
+}
+
+.android-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.android-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.android-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .android-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
+
+.android-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.android-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.android-screen {
+  text-align: center;
+}
+
+.android-screen .android-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
+}
+
+.android-image-link {
+  text-decoration: none;
+}
+
+.android-wear {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+  .android-wear .android-screen-image {
+    width: 40%;
+    z-index: 1;
+  }
+
+
+.android-phone {
+  display: inline-block;
+  width: 64px;
+  margin-right: 48px;
+}
+
+  .android-phone .android-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.android-tablet {
+  display: inline-block;
+  width: 110px;
+  margin-right: 64px;
+}
+
+  .android-tablet .android-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .android-tablet .android-link {
+    display: block;
+    z-index: 2;
+  }
+
+
+.android-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
+}
+
+  .android-tv .android-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.android-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+  .android-auto .android-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+  }
+
+
+.android-wear-section {
+  position: relative;
+  background: url('images/wear.png') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.android-wear-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #37474f;
+}
+
+.android-wear-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+  .android-wear-band-text p {
+    padding-top: 8px;
+  }
+
+.android-link {
+  text-decoration: none;
+  color: #8bc34a !important;
+}
+
+  .android-link:hover {
+    color: #7cb342 !important;
+  }
+
+  .android-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.android-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+  .android-alt-link:hover {
+    color: #00bfa5 !important;
+  }
+
+  .android-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.android-customized-section {
+  text-align: center;
+}
+
+.android-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .android-customized-section-text p {
+    padding-top: 16px;
+  }
+
+.android-customized-section-image {
+  background: url('images/devices.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.android-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .android-more-section .android-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.android-card-container {
+}
+
+  .android-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .android-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .android-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .android-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .android-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .android-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .android-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.android-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .android-footer a:hover {
+    color: #8bc34a;
+  }
+
+  .android-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .android-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .android-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .android-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .android-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.android-link-menu:hover {
+  cursor: pointer;
+}
+/*LLL*/
+
+.mdl-layout__drawer-button {
+	display: none;
+
+}
+	.demo-content {
+	  border-radius: 2px;
+	  padding: 80px 56px;
+	  margin-bottom: 80px;
+	}
+.idezet_szoveg{
+  font-size:   calc( (23px + (29 - 23) * ( (100vw - 900px ) / ( 1366 - 900)))*1  );/*még megosztó  gomb kerül mellé*/
+  line-height: calc( (33px + (41 - 33) * ( (100vw - 900px ) / ( 1366 - 900)))*1  );
+	}
+#kat_filter_gomb{
+	visibility:hidden;
+	}
+#kat_filter_ul{	
+	max-height:calc(100vh - 120px);
+	overflow-y:scroll;
+  overflow-x:hidden;
+  padding-top:0;
+	}
+#kat_filter_ul li  {
+	text-decoration:none;
+	color:#db4c3f;
+	font-size:16px;
+	font-weight:bold;
+	}
+#kat_filter_ul li:hover{
+	background:#fbe3e3;
+	}
+#kat_filter_ul li[disabled]:hover{
+	background:transparent;
+	background:#fbe3e3;
+	cursor:default;
+	}
+#kat_filter_ul li[disabled]{
+  color:#333;
+  background:#fbe3e3;
+	}
+/* END LLL*/
+
+/**** Mobile layout ****/
+@media (max-width: 840px) {
+	
+/*LLL*/
+	.mdl-layout__drawer-button {
+  display: initial;
+
+	}
+	.demo-content {
+	  border-radius: 2px;
+	  padding: 10px 10px !important;/*padding: 80px 56px;*/
+	  margin-bottom: 80px;
+	}
+	
+	.mdl-shadow--4dp{
+	box-shadow:none;
+	}
+	
+.idezet_szoveg{
+  font-size:   calc( 12px + (33 - 12) * ( (100vw - 300px ) / ( 840 - 300)) );
+  line-height: calc( 19px + (46 - 19) * ( (100vw - 300px ) / ( 840 - 300)) );
+	}
+#kat_filter_gomb{
+	visibility:visible;
+	background:#ffe7eb;
+
+	}
+.desktop_only{
+    display:none;
+    }
+/* END LLL*/
+	
+	
+	
+  .android-navigation-container {
+    display: none;
+  }
+
+  .android-title {
+    display: none !important;
+  }
+
+  .android-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .android.android-search-box.is-focused ~ .android-mobile-title,
+  .android-search-box.is-focused + .android-navigation-container + .android-mobile-title {
+    opacity: 0;
+  }
+
+  .android-more-button {
+    display: none;
+  }
+
+  .android-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .android-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .android-be-together-section {
+    height: 350px;
+  }
+
+  .android-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .android-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .android-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .android-create-character img {
+    height: 12px;
+  }
+
+  .android-fab {
+    display: none;
+  }
+
+  .android-wear-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .android-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
+
+
+
+
+
+/* LLL Király */
+
+@media screen and (max-width: 840px) {
+  .mdl-layout__container {
+    position: static;
+  }
+}
+
+.mdl-layout__header{
+  position: fixed;
+}
+
+
+html, body {
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+mdl-layout {
+  min-height: 100%;
+}
+
+/*
+.mdl-cell{
+margin-top:0px;
+	
+	}*/
+
+
+/*END LLL*/
+
+
+.mdl-layout {
+    overflow: visible;
+}
+.mdl-layout__drawer {
+    position: fixed;
+}
+.mdl-layout__content {
+    display: block;
+    overflow: visible;
+    margin-top: 64px;
+}
+.is-small-screen .mdl-layout__content {
+    margin-top: 56px;
+}
+.mdl-layout__header {
+    position: fixed;
+}
+.mdl-layout__obfuscator {
+    position: fixed;
+}
+
+
+
+html, body {
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+mdl-layout {
+  min-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #787878;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #787878;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px solid #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ebebeb;
+}
+::-webkit-scrollbar-track:active {
+  background: #ebebeb;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+
+
+/*Menühöz #Lacy*/
+.mdl-list__item--two-line .mdl-list__item-primary-content{
+	height:40px;
+	line-height:40px;/*középre*/
+	}
+.mdl-list__item--two-line {
+	display:block;
+	text-transform:none;
+	text-align:inherit;
+	cursor:pointer;
+	border-radius:12px;
+	}
+.mdl-list__item-primary-content {
+	text-decoration:none !important;
+	color:#db4c3f ;
+
+	}
+.mdl-button:hover{
+	background: #fbe3e3;
+	}
+.mdl-ripple{
+	background: #fb6b6b;
+	}
+.mdl-layout__header--waterfall{
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.mdl-list__item-avatar{
+    text-align:center;
+    font-size: 24px;
+	}
+.mdl-list__item-avatar{
+	background-color:#db4c3f;
+	font-family: "Lato";
+  font-style: inherit;
+	}
+.demo-list-two {
+  width: 33%;
+	}
+
+::selection {
+  background: #cc0000; /*#ffb7b7;*/ /* WebKit/Blink Browsers */
+	}
+::-moz-selection {
+  background: #cc0000; /*#ffb7b7;*/ /* Gecko Browsers */
+	}
+	
+/*Bal navigáció, felülírás #Lacy*/
+.android-drawer .mdl-navigation a.mdl-js-ripple-effect {
+	line-height:24px;
+	height:24px;
+	width:100%;
+	text-align:left;
+	font-weight:bold;
+	}
+.android-drawer .mdl-navigation__link.mdl-navigation__link{
+	color:#db4c3f;
+	font-size:14px;
+	}
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover{
+	background: #fbe3e3;
+	}
+.android-drawer span.mdl-navigation__link.mdl-navigation__link,
+.android-drawer span.mdl-navigation__link.mdl-navigation__link:hover {
+	background:none;
+	color:#333;
+	text-align:center;
+	font-weight:bold;
+	font-size:18px;;
+	}
+.mdl-layout__drawer{
+	overflow-x:hidden;
+	}
+	
+a.mdl-js-ripple-effect {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      position: relative;
+    }
+    
+/*Kategória navigáció #Lacy*/
+.lacy_kat{
+	position:fixed;
+	max-height:calc(100vh - 120px);
+	width:inherit;
+	overflow-y:scroll;
+  overflow-x:hidden;
+  margin-top:0;
+  padding-top:0;
+	}
+.lacy_kat::-webkit-scrollbar-thumb{
+	background:#e6e6e6;
+	}
+.lacy_kat .mdl-list__item {
+	height:40px;/*calc() mehet 1-ig, asszerint, hogy mennyi van?*/
+	line-height:40px;/* javascript  föléviszi akkor van scrollbar */
+	min-height:initial;
+	display:block;
+	text-transform:none;
+	text-align:inherit;
+	cursor:pointer;
+	border-radius:12px;
+	padding:0px 16px 0px 16px;
+	}
+.lacy_kat li {
+	text-decoration:none;
+	color:#db4c3f;
+	}
+	
+	
+
+
+
+
+
+/*Bal oldali nyitható menü*/
+.mdl-accordion{
+	cursor:pointer;
+	}
+	.mdl-accordion.mdl-accordion--opened {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-top: -1px; }
+
+.mdl-accordion.mdl-accordion--opened + .mdl-accordion.mdl-accordion--opened {
+  border-top: none;
+  margin-top: 0; }
+
+.mdl-accordion .mdl-accordion__content-wrapper {
+  overflow: hidden; }
+
+.mdl-accordion .mdl-accordion__content {
+  transition-property: margin-top;
+  transition-duration: 0.1s; }
+
+.mdl-accordion .mdl-accordion__icon {
+  transition-property: transform;
+  transition-duration: 0.1s;
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 15px;
+  margin-top: -2px; }
+
+.mdl-accordion.mdl-accordion .mdl-accordion__icon {
+  transform: rotate(-90deg); }
+.mdl-accordion.mdl-accordion--opened .mdl-accordion__icon {
+  transform: rotate(0deg);
+  color: #db4c3f; }
+
+.mdl-accordion.mdl-accordion--opened .mdl-accordion__button {
+  color: #cc0000;
+  font-weight:bold;
+   }
+
+.mdl-accordion.mdl-accordion--opened .mdl-accordion__content {
+  margin-top: 0 !important; }
+.bal_fokat{
+	font-size:18px;
+	color:#333333 !important;
+	}
+.bal_fokat_kulso{
+	padding:12px 40px !important; 
+	}
+.bal_fokat:hover{
+	color:#e23838;
+	}
+.bal_alkat{
+	padding:4px 50px !important;
+	color:#333333 !important;
+	}
+.bal_alkat:hover{
+	color:#e23838 !important;
+	}
+.bal_alkat_current_link{
+	color:#cc0000 !important;
+	background-color:#fbe3e3 !important;
+	}
+
+.mdl-accordion__content .mdl-navigation__link{
+	font-weight:bold;
+	}
+.d_menu_alkat{
+	padding:4px 50px !important; 
+	}
+
+
+
+.android-title a,
+.android-mobile-title a{
+	/*color:#e00f0f;*/
+	font-size:34px;
+	font-weight:bold;
+	cursor:pointer;
+	padding:5px;
+	border-radius:5px;
+	color:#cc0000 !important;
+
+	}
+.android-title a:hover,
+.android-mobile-title a:hover{
+	color: white  !important;
+	background-color:#cc0000;
+
+	}
+.inner_right{
+	z-index:100;
+	}
+.mdl-layout__content{
+	overflow-x:hidden;}
+.idezet_szoveg{
+	font-size:20px !important;
+	line-height:155% !important;
+	color:#333;
+	font-weight:bold; }
+
+.szerzo{
+	text-align:right;
+	font-weight:normal;
+	/*font-style:italic;*/
+	font-size:14px !important;
+	padding-bottom:25px;
+	}
+
+.megosztas, .megosztas a{
+	display:inline-block;
+	float:right;
+	font-size:14px;
+	color:#d26b6b;
+	padding-left:30px;
+	text-align:right;
+	}
+html, body, .android-title, .android-mobile-title{
+	font-family:'Open Sans';
+	}
+	
+.paging_center{
+    text-align:center;
+}
+
+.paging_btn_next{
+    width:200px; 
+    padding:16px;
+    margin: 0 auto;
+    display:inline-block;
+    text-align:center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 2px;
+    color:#CC0000;
+    }
+.paging_btn_next:hover{
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+

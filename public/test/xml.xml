@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<products>
+	<product>
+            <identifier>5161655</identifier>
+            <name>Termék neve</name>
+            <price>1990</price>
+            <net_price>1453</net_price>
+            <product_url>http://example.com/products.php?id=5161655</product_url>
+            <ean_code>5994567891234</ean_code>
+            <image_url>http://example.com/images/picture.jpg</image_url>
+	</product>
+	<product>
+            <identifier>5161655</identifier>
+            <name>Termék neve</name>
+            <price>1990</price>
+            <net_price>1453</net_price>
+            <product_url>http://example.com/products.php?id=5161655</product_url>
+            <ean_code>5994567891234</ean_code>
+            <image_url>http://example.com/images/picture.jpg</image_url>
+	</product>
+</products>

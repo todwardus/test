@@ -1,0 +1,47 @@
+#livesearch{
+    position:absolute;
+    left:0;/*kell FF, OP*/
+    top: 43px;
+    background-color: white;    
+    z-index: 100;
+    min-width: 250px;
+    max-width: 475px;
+    font-family: 'Open Sans',sans-serif;
+    text-align:left;
+    font-size: 14px;
+    background-color: white;
+    /*border: 1px solid #ddd;*/
+}
+#livesearch a{
+    display:block;
+    text-decoration:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:15px;
+    
+    
+}
+#livesearch a:hover{
+    /*
+    background-color:#0078bd;
+    text-decoration:underline;
+    color:white;
+    */
+    /*background: #f5f7fa;*/
+    background: #0069a6;
+    color:white;
+    
+    border-color: #e9eef5;
+
+}
+
+/* Hide if clicked away #Iama FuckingGenius*/
+#keyword:not(:focus) + #livesearch:not(:hover){
+    display:none;
+    }
+
+.input-group,
+.home_keres {
+    position: relative;
+    }

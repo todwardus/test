@@ -1,0 +1,2 @@
+[21-Dec-2016 13:06:57 CET] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 72 bytes) in /home/-www/adsensepenz.hu/htdocs/biobody_hu/public/test/null.php on line 5
+[21-Dec-2016 13:07:10 CET] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 72 bytes) in /home/-www/adsensepenz.hu/htdocs/biobody_hu/public/test/null.php on line 15

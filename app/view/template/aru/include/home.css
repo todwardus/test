@@ -1,0 +1,61 @@
+.home_section{
+    margin-top: 25vh;
+    padding-top: 0px;
+}
+
+.home_keres{
+    width:40vw;
+    min-width:300px;
+    margin: 0 auto;
+}
+.home_keres input, .home_keres button{
+    height:44px;
+}
+
+.home_keres_gomb{
+    margin-top:25px;
+    }
+
+
+body{
+    height:100%;
+    overflow-y:hidden;
+}
+html, body, main {
+    height: 100%;
+}
+main{
+    position:absolute;
+}
+
+.home_footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width:100%;
+    margin:0;
+    padding:0;
+    display:inline-block;
+    font-size:12px;
+}
+.cim{
+    font-size: calc(4vw + 4vh + 2vmin) !important;
+    line-height:110%;
+    margin-bottom:0 !important;
+    
+}
+.alcim{
+    font-size: calc(2vw + 2vh + 1vmin) !important;
+    line-height:110%;
+    margin-bottom: 6vh !important;
+    
+}
+
+.home_checkbox label{
+    display:inline-block;
+    margin-top:10px;
+    
+    
+    
+    }

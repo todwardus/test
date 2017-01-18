@@ -1,0 +1,79 @@
+.img_wrap{
+    width:20%;
+    float:left;
+    }
+.img_wrap img{
+    width:100%;
+    
+    
+    }
+
+/*TABOK*/
+
+.tabs #arak a,
+.tabs #arak:target a,
+.tabs #leiras:target a,
+.tabs #velemenyek:target a
+{
+      background-color: #fff;
+      color: #31373d;
+      border-bottom-color: #fff;
+      cursor: default;
+      text-decoration: none;
+}
+.tabs #arak:target:first-child a,
+.tabs #leiras:target:first-child a,
+.tabs #velemenyek:target:first-child a
+{
+      border-top-left-radius: .3rem; }
+      
+.tabs #arak:target:last-child a,
+.tabs #leiras:target:last-child a,
+.tabs #velemenyek:target:last-child a
+
+{
+      border-top-right-radius: .3rem; }
+      
+.tabs #arak:target a:active,
+.tabs #leiras:target a:active,
+.tabs #velemenyek:target a:active,
+.tabs #arak:target a:hover,
+.tabs #leiras:target a:hover,
+.tabs #velemenyek:target a:hover
+ {
+  outline: 0; }
+  
+/*Alapeset*/
+.tabs #arak:not(:target) a{
+    background-color:inherit;
+    color: #0078bd;
+    cursor: inherit;
+    text-decoration: inherit;
+    border-right: .1rem solid #ebeef0;
+    border-right-width: 0.1rem;
+    border-right-style: solid;
+    border-right-color: rgb(235, 238, 240);
+    border-bottom: .1rem solid #ebeef0;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(235, 238, 240);
+}
+
+/*https://css-tricks.com/examples/CSSTabs/#box1*/
+
+
+    
+.tabbed-area div {
+    display:none !important; }
+    
+.tabbed-area .default_page {
+    display:block !important; }
+
+    
+.tabbed-area div:target{
+    display:block !important;
+    background-color:red;
+    }
+
+
+    px solid white; }*/
